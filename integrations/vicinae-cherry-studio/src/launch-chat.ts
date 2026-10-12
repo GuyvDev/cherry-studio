@@ -2,7 +2,7 @@ import { closeMainWindow, open, showToast, Toast } from '@vicinae/api'
 
 import { makeChatLink } from './chat-link'
 
-export async function launchChat(prompt: string, temporary: boolean): Promise<void> {
+export async function launchChat(prompt: string, temporary?: boolean): Promise<void> {
   try {
     const url = makeChatLink(prompt, temporary)
     await closeMainWindow()

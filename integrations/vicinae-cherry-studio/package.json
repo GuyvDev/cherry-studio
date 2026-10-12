@@ -14,7 +14,7 @@
     {
       "name": "chat",
       "title": "Ask Cherry Studio",
-      "description": "Send a prompt to a new saved Cherry Studio conversation.",
+      "description": "Send a prompt using your default floating chat mode in Cherry Studio.",
       "mode": "no-view",
       "arguments": [
         {
@@ -34,6 +34,20 @@
         {
           "name": "prompt",
           "placeholder": "Ask a temporary question",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "saved-chat",
+      "title": "Ask Cherry Studio in a Saved Chat",
+      "description": "Send a prompt to a new saved Cherry Studio conversation.",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "prompt",
+          "placeholder": "Ask a question",
           "type": "text",
           "required": true
         }

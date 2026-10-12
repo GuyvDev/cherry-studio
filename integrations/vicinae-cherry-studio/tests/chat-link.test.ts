@@ -26,3 +26,17 @@ test('rejects empty commands and prompts outside the Cherry protocol limit', () 
   assert.throws(() => makeChatLink(' !chat ', false), /Enter a prompt/)
   assert.throws(() => makeChatLink('a'.repeat(16_001), false), /16,000/)
 })
+
+
+test('default launcher mode is omitted so Cherry can use its saved preference', () => {
+  const url = new URL(makeChatLink('!chat where is paris'))
+  assert.equal(url.searchParams.has('temporary'), false)
+  assert.equal(url.searchParams.get('submit'), 'true')
+  assert.equal(url.searchParams.get('prompt'), 'where is paris')
+})
+
+test('saved command overrides a temporary default', () => {
+  const url = new URL(makeChatLink('!savedchat where is paris', false))
+  assert.equal(url.searchParams.get('prompt'), 'where is paris')
+  assert.equal(url.searchParams.get('temporary'), 'false')
+})

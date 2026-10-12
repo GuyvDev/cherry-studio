@@ -21,6 +21,11 @@ declare namespace Preferences {
 	export type TemporaryChat = ExtensionPreferences & {
 		
 	}
+
+	/** Command: Ask Cherry Studio in a Saved Chat */
+	export type SavedChat = ExtensionPreferences & {
+		
+	}
 }
 
 declare namespace Arguments {
@@ -33,6 +38,12 @@ declare namespace Arguments {
 	/** Command: Ask Cherry Studio Temporarily */
 	export type TemporaryChat = {
 		/** Ask a temporary question */
+		"prompt": string
+	}
+
+	/** Command: Ask Cherry Studio in a Saved Chat */
+	export type SavedChat = {
+		/** Ask a question */
 		"prompt": string
 	}
 }

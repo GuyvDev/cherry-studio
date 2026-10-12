@@ -1,8 +1,9 @@
 # Cherry Studio for Vicinae
 
-A native Vicinae extension with two no-view commands. **Ask Cherry Studio** sends
-the prompt immediately to a new saved conversation. **Ask Cherry Studio
-Temporarily** opens an in-memory conversation instead. Both use Cherry's
+A native Vicinae extension with three no-view commands. **Ask Cherry Studio** sends
+the prompt immediately using your default floating chat mode in Cherry settings.
+**Ask Cherry Studio Temporarily** always opens an in-memory conversation.
+**Ask Cherry Studio in a Saved Chat** always creates a saved conversation. All use Cherry's
 configured Quick Assistant model or assistant; no API credentials are stored in
 the extension.
 
@@ -31,7 +32,12 @@ In Vicinae, select **Ask Cherry Studio** and set its alias to `!chat` through th
 action panel. Enter a prompt in the command's argument field, then press Enter.
 You can also mark this command as a fallback command; it accepts the whole root
 search query and removes an initial `!chat` prefix. Use `!tempchat` for the
-temporary command if desired.
+temporary command and `!savedchat` for the saved command if desired.
+
+Set the default in **Cherry Settings → Quick Assistant → Default floating chat mode**.
+Saved is the initial default. The explicit temporary and saved commands override it.
+Cherry also offers separate configurable global shortcuts for these two modes,
+with direct shortcut-editor links in Quick Assistant settings.
 
 The floating Cherry window opens in the center of the active screen. Use **Open
 in Cherry Studio** to continue a saved conversation in the full app. A temporary
