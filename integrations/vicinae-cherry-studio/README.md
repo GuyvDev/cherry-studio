@@ -33,10 +33,14 @@ You can also mark this command as a fallback command; it accepts the whole root
 search query and removes an initial `!chat` prefix. Use `!tempchat` for the
 temporary command if desired.
 
-The floating Cherry window opens on the right of the active screen. Use **Open
+The floating Cherry window opens in the center of the active screen. Use **Open
 in Cherry Studio** to continue a saved conversation in the full app. A temporary
 conversation offers **Save and open in Cherry Studio**, making the storage change
-explicit. The delete action uses Cherry's existing Recycle Bin for saved chats.
+explicit. The inline model picker and response settings control subsequent turns.
+Escape hides and retains the conversation; C outside text fields copies the latest
+answer. Minimize saves a temporary conversation into history without opening Main.
+X asks before deleting and uses Cherry's Recycle Bin for saved chats; Cancel keeps
+the conversation open.
 
 The extension uses Vicinae's `open` API and URL encoding, never a shell command.
 Window positioning on Wayland remains subject to the compositor's policy.
