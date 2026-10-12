@@ -1,0 +1,56 @@
+{
+  "name": "cherry-studio",
+  "title": "Cherry Studio",
+  "description": "Ask your configured Cherry Studio model from Vicinae in a saved or temporary floating chat.",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "author": "GuyvDev",
+  "icon": "chat.svg",
+  "categories": [
+    "Productivity"
+  ],
+  "commands": [
+    {
+      "name": "chat",
+      "title": "Ask Cherry Studio",
+      "description": "Send a prompt to a new saved Cherry Studio conversation.",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "prompt",
+          "placeholder": "Ask a question",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "temporary-chat",
+      "title": "Ask Cherry Studio Temporarily",
+      "description": "Send a prompt to a new temporary Cherry Studio conversation.",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "prompt",
+          "placeholder": "Ask a temporary question",
+          "type": "text",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "scripts": {
+    "build": "vici build",
+    "dev": "vici develop",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/chat-link.test.ts"
+  },
+  "dependencies": {
+    "@vicinae/api": "0.29.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.4",
+    "typescript": "5.9.2"
+  }
+}
